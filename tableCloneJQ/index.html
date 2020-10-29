@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Clone test </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/themes/smoothness/jquery-ui.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js"></script>
+  </head>
+  <body>
+
+  <h1>Table One </h1> 
+
+  <div class="table-responsive">
+
+    <table id="cartTable" class="table"> 
+
+      <thead>
+        <th></th>
+        <th>
+          ツール
+        </th>
+        <th>
+          ウェイト
+        </th>
+        <th>
+          回数
+        </th>
+        <th colspan="2"></th>
+      </thead>
+
+
+      <tbody> 
+    
+        <tr>
+          <td class="w-10">1</td>
+
+          <td class="w-40">
+            <div class="container">
+              <div class="row">
+                <input type="text" name="weight_tool" id="tool" class="form-control tool" value="Text1">
+              </div>
+              <div class="row">
+                <div> <span class="msg_error"></span> </div>
+              </div>
+            </div>
+          </td>
+
+          <td class="w-15">
+            <div class="container">
+              <div class="row">
+                <div>
+                  <input type="number" name="weight_tool" id="weight" class="karte_input_box form-control weight_tool" value="1">
+                </div>
+                <div class="tool-value"> kg </div>
+              </div>
+              <div class="row">
+                <div> <span class="msg_error"></span> </div>
+              </div>
+            </div>
+
+          </td>
+
+          <td class="w-15">
+            <div class="container">
+              <div class="row">
+                <div>
+                  <!--ウエイトと回線のインプット名が同じです!!!-->
+                  <input type="number" name="weight_tool" id="actual_times" class="karte_input_box form-control actual_times" min="0" value="1">
+                </div>
+                <div class="tool-value"> 回 </div>
+              </div>
+              <div class="row">
+                <div> <span class="msg_error"></span> </div>
+              </div>
+            </div>
+          </td>
+
+
+          <td class="w-10">
+            <button type="button" class="btn btn-success btn-primary btn-sm" id="copy_set1" onclick="copy(this)">複製</button>
+          </td>
+          <td class="w-10">
+            <button type="button" class="btn btn-danger btn-sm del_more_content delete_set btn-sm" id="delete_set1" onclick="del(this)">削除</button>
+          </td>
+        </tr>
+
+        <tr>
+
+          <td class="w-10"> 2 </td>
+
+          <td class="w-40">
+            <input type="text" name="weight_tool" id="tool" class="tool_input_box form-control tool" value="Text2">
+            <span class="msg_error"></span>
+          </td>
+
+          <td class="w-15">
+            <div class="container">
+              <div class="row">
+                <div>
+                  <input type="number" name="weight_tool" id="weight" class="karte_input_box form-control weight_tool" value="2">
+                </div>
+                <div class="tool-value"> kg </div>
+              </div>
+              <div class="row">
+                <div> <span class="msg_error"></span> </div>
+              </div>
+            </div>
+          </td>
+
+          <td class="w-15">
+            <div class="container">
+              <div class="row">
+                <div>
+                  <!--ウエイトと回線のインプット名が同じです!!!-->
+                  <input type="number" name="weight_tool" id="actual_times" class="karte_input_box form-control actual_times" min="0" value="2">
+                </div>
+                <div class="tool-value"> 回 </div>
+              </div>
+              <div class="row">
+                <div> <span class="msg_error"></span> </div>
+              </div>
+            </div>
+          </td>
+
+          <td class="w-10">
+            <button type="button" class="btn btn-success btn-sm" id="copy_set1" onclick="copy(this)">複製</button>
+          </td>
+
+          <td class="w-10">
+            <button type="button" class="btn btn-danger btn-sm del_more_content delete_set btn-sm" id="delete_set1" onclick="del(this)">削除</button>
+          </td>
+
+        </tr>
+
+      </tbody> 
+    </table>  
+  </div>
+
+
+
+  <h1>Table Two </h1> 
+
+  <div class="table-responsive">
+
+    <table id="cartTable2" class="table"> 
+
+      <thead>
+        <th></th>
+        <th>
+          ツール
+        </th>
+        <th>
+          ウェイト
+        </th>
+        <th>
+          回数
+        </th>
+        <th colspan="2"></th>
+      </thead>
+
+
+      <tbody> 
+    
+        <tr>
+          <td class="w-10">1</td>
+
+          <td class="w-40">
+            <div class="container">
+              <div class="row">
+                <input type="text" name="weight_tool" id="tool" class="form-control tool" value="Text3">
+              </div>
+              <div class="row">
+                <div> <span class="msg_error"></span> </div>
+              </div>
+            </div>
+          </td>
+
+          <td class="w-15">
+            <div class="container">
+              <div class="row">
+                <div>
+                  <input type="number" name="weight_tool" id="weight" class="karte_input_box form-control weight_tool" value="3">
+                </div>
+                <div class="tool-value"> kg </div>
+              </div>
+              <div class="row">
+                <div> <span class="msg_error"></span> </div>
+              </div>
+            </div>
+
+          </td>
+
+          <td class="w-15">
+            <div class="container">
+              <div class="row">
+                <div>
+                  <!--ウエイトと回線のインプット名が同じです!!!-->
+                  <input type="number" name="weight_tool" id="actual_times" class="karte_input_box form-control actual_times" min="0" value="3">
+                </div>
+                <div class="tool-value"> 回 </div>
+              </div>
+              <div class="row">
+                <div> <span class="msg_error"></span> </div>
+              </div>
+            </div>
+          </td>
+
+
+          <td class="w-10">
+            <button type="button" class="btn btn-success btn-primary btn-sm" id="copy_set1" onclick="copy(this)">複製</button>
+          </td>
+          <td class="w-10">
+            <button type="button" class="btn btn-danger btn-sm del_more_content delete_set btn-sm" id="delete_set1" onclick="del(this)">削除</button>
+          </td>
+        </tr>
+
+        <tr>
+
+          <td class="w-10"> 2 </td>
+
+          <td class="w-40">
+            <input type="text" name="weight_tool" id="tool" class="tool_input_box form-control tool" value="Text4">
+            <span class="msg_error"></span>
+          </td>
+
+          <td class="w-15">
+            <div class="container">
+              <div class="row">
+                <div>
+                  <input type="number" name="weight_tool" id="weight" class="karte_input_box form-control weight_tool" value="4">
+                </div>
+                <div class="tool-value"> kg </div>
+              </div>
+              <div class="row">
+                <div> <span class="msg_error"></span> </div>
+              </div>
+            </div>
+          </td>
+
+          <td class="w-15">
+            <div class="container">
+              <div class="row">
+                <div>
+                  <!--ウエイトと回線のインプット名が同じです!!!-->
+                  <input type="number" name="weight_tool" id="actual_times" class="karte_input_box form-control actual_times" min="0" value="4">
+                </div>
+                <div class="tool-value"> 回 </div>
+              </div>
+              <div class="row">
+                <div> <span class="msg_error"></span> </div>
+              </div>
+            </div>
+          </td>
+
+          <td class="w-10">
+            <button type="button" class="btn btn-success btn-sm" id="copy_set1" onclick="copy(this)">複製</button>
+          </td>
+
+          <td class="w-10">
+            <button type="button" class="btn btn-danger btn-sm del_more_content delete_set btn-sm" id="delete_set1" onclick="del(this)">削除</button>
+          </td>
+
+        </tr>
+
+      </tbody> 
+    </table>  
+  </div>
+
+  <script src="script.js"></script> 
+
+  </body>
+</html>
